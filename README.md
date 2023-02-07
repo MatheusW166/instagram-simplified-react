@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MatheusW166/instagram-simplified/blob/main/LICENCE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Layout Simplificado do Instagram (React)
 
-## Available Scripts
+| <a href="#refs-mobile">Imagens</a> | <a href="#about">Sobre</a> | <a href="#tech">Tecnologias</a> |
 
-In the project directory, you can run:
+<!-- Página disponível no link a seguir:
 
-### `npm start`
+- [Instagram Clone](https://matheusw166.github.io/instagram-simplified/) -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ℹ Sobre
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<span id="about">
+Projeto criado como parte de avaliação no curso full stack da <a href="https://www.driven.com.br/">Driven</a>. O projeto consiste em uma página responsiva baseada no Instagram Web, com opção de troca de temas. A troca de temas foi implementada apenas com CSS e HTML, usando JavaScript somente para salvar a escolha do usuário localmente.
+</span>
 
-### `npm test`
+## 🎨 Imagens
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📱 Versão mobile
 
-### `npm run build`
+<div id="refs-mobile" align="center">
+<img src="https://github.com/MatheusW166/instagram-simplified/blob/main/refs/light_mobile.jpg" alt="light-mb" style="width:48%;" />
+<img src="https://github.com/MatheusW166/instagram-simplified/blob/main/refs/dark_mobile.jpg" alt="dark-mb" style="width:48%;" />
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🖥 Versão desktop
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div id="refs-desktop" align="center">
+<img src="https://github.com/MatheusW166/instagram-simplified/blob/main/refs/light_desktop.png" alt="light_desktop" /><br/>
+<img src="https://github.com/MatheusW166/instagram-simplified/blob/main/refs/dark_desktop.png" alt="dark_desktop" />
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <span id="tech">💻 Tecnologias</span>
 
-### `npm run eject`
+### Protótipo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Implementação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
