@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+    /* Default colors */
+    --white: #fff;
+    --gray-50: #fafafa;
+    --gray-200: #dbdbdb;
+    --gray-300: #afafaf;
+    --gray-400: #979797;
+    --gray-500: #8e8e8e;
+    --gray-700: #262626;
+    --blue-50: #b2dffc;
+    --blue-500: #0095f6;
+    --blue-800: #00376b;
+    --read-500: #dc2626;
+
+    /* Dark mode only */
+    --gray-100: #f5f5f5;
+    --gray-350: #b2b2b2;
+    --gray-600: #7a7a7a;
+    --gray-650: #727272;
+    --gray-750: #2f2f2f;
+    --gray-800: #202020;
+    --gray-900: #171717;
+    --blue-900: #06344e;
+    --read-400: #ef4444;
+
+    /* Where colors are applied (light) */
+    --background-primary: var(--gray-50);
+    --background-secondary: var(--white);
+    --text-primary: var(--gray-700);
+    --text-secondary: var(--gray-500);
+    --text-tertiary: var(--gray-400);
+    --text-quartenary: var(--gray-300);
+    --tag-mention: var(--blue-800);
+    --button-disabled: var(--blue-50);
+    --button-enabled: var(--blue-500);
+    --border-separator: var(--gray-200);
+    --heart-red: var(--read-500);
+
+    /* Layout */
+    --content-width: 935px;
+}
+
+:root:has(#switch-btn:checked) {
+    /* Where colors are applied (dark) */
+    --background-primary: var(--gray-800);
+    --background-secondary: var(--gray-900);
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-350);
+    --text-tertiary: var(--gray-600);
+    --text-quartenary: var(--gray-650);
+    --tag-mention: var(--blue-500);
+    --button-disabled: var(--blue-900);
+    --button-enabled: var(--blue-500);
+    --border-separator: var(--gray-750);
+    --heart-red: var(--read-400);
+}
+:root:has(#switch-btn:checked) .story-ring > img:last-child {
+    filter: saturate(1.8) brightness(1.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-primary);
+}
+
+ion-icon {
+    font-size: 22px;
+}
+
+img {
+    object-fit: cover;
+}
+
+hr {
+    border: none;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-separator);
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    display: none;
+}
+
+/* ================================================ */
+/* Cabeçalho */
+header {
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--border-separator);
+    padding: 0 17px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    color: var(--text-primary);
+}
+
+header > div {
+    max-width: var(--content-width);
+    height: 54px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > hr {
+    height: 22px;
+    background-color: var(--border-separator);
+    margin: 0 10px;
+}
+
+.instagram-img svg {
+    margin-top: 10px;
+    color: inherit;
+}
+
+.search {
+    width: 215px;
+    height: 28px;
+    display: flex;
+}
+
+.search > input {
+    background: var(--background-primary);
+    border: 1px solid var(--border-separator);
+    border-radius: 3px;
+    outline: none;
+    flex: 1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--text-primary);
+}
+
+.search > input::placeholder {
+    text-align: center;
+    color: var(--text-tertiary);
+}
+
+nav > ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+/* FIM Cabeçalho */
+/* ================================================ */
+
+/* ================================================ */
+/* Layout principal */
+.content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 34px 0;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: min(614px, 100%);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+aside {
+    margin-top: 55px;
+    position: sticky;
+    top: 55px;
+}
+/* FIM Layout principal */
+/* ================================================ */
+
+/* ================================================ */
+/* Main left */
+
+/* Stories */
+.stories {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-separator);
+    border-radius: 3px;
+    display: flex;
+    padding: 16px 17px;
+    gap: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stories > object {
+    position: absolute;
+    z-index: 2;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stories > object + .story {
+    color: var(--text-secondary);
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--text-primary);
+    text-align: center;
+    width: 66px;
+}
+
+.story > p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.story-ring {
+    position: relative;
+    height: 66px;
+    width: 66px;
+}
+
+.story-ring > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+
+.story-ring > img:last-child {
+    width: 100%;
+}
+
+/* Pubs */
+.pubs {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.pubs article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-secondary);
+    border-radius: 3px;
+    border: 1px solid var(--border-separator);
+}
+
+.pubs .my-user {
+    gap: 14px;
+    margin: 0;
+    padding: 15px 17px;
+    border-bottom: 1px solid var(--border-separator);
+}
+
+.pubs .my-user a:last-child {
+    margin-left: auto;
+}
+
+.pubs .my-user ion-icon {
+    font-size: 16px;
+}
+
+.pubs .my-user > a img {
+    width: 32px;
+    height: 32px;
+}
+
+.pubs article > img,
+.pubs article > video {
+    max-width: 100%;
+    max-height: 612px;
+}
+
+.bottom {
+    padding: 14px 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottom > div:not(:first-child) {
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 130%;
+    font-size: 14px;
+}
+
+.bottom a {
+    font-weight: 500;
+}
+
+.bottom > .actions {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.bottom > .actions a:last-child {
+    margin-left: auto;
+}
+
+.bottom > .likes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bottom > .likes img {
+    width: 20px;
+    height: 20px;
+}
+
+.like-btn {
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+
+.like-btn input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.like-btn label,
+.like-btn ion-icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+}
+
+.like-btn ion-icon:nth-child(2) {
+    visibility: hidden;
+    color: var(--heart-red);
+}
+
+.like-btn:has(input:checked) ion-icon:nth-child(1) {
+    visibility: hidden;
+}
+.like-btn:has(input:checked) ion-icon:nth-child(2) {
+    visibility: visible;
+}
+
+.bottom p > a:has(~ span) {
+    margin-right: 4px;
+}
+
+.bottom .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bottom .comments .see-more > a {
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.bottom a.mention {
+    color: var(--tag-mention);
+    font-weight: normal;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.comment ion-icon {
+    font-size: 14px;
+}
+
+.comment .like-btn,
+.comment .like-btn label,
+.comment .like-btn ion-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.posted-at {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.posted-at p:last-child {
+    font-size: 12px;
+}
+
+.posted-at p:first-child {
+    font-size: 10px;
+    color: var(--text-secondary);
+}
+
+.post-a-comment {
+    display: flex;
+    padding: 0 17px;
+    align-items: center;
+    height: 54px;
+    border-top: 1px solid var(--border-separator);
+    color: var(--text-primary);
+}
+
+.post-a-comment > input {
+    flex: 1;
+    resize: none;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    background: transparent;
+}
+
+.post-a-comment > input::placeholder {
+    color: var(--text-secondary);
+}
+
+.post-a-comment > button {
+    height: 100%;
+    color: var(--button-disabled);
+    font-weight: 600;
+    transition: ease 0.3s;
+}
+
+.post-a-comment > button:hover {
+    color: var(--button-enabled);
+}
+
+/* FIM Main left */
+/* ================================================ */
+
+/* ================================================ */
+/* Main right */
+.my-user {
+    margin: 26px 0 22px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--text-primary);
+}
+
+.my-user > div p:last-child {
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.suggestions {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.suggestions > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestions h6 {
+    color: var(--text-secondary);
+}
+
+.suggestions button {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion > a .avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 11px;
+}
+
+.suggestion > div p:first-child {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.suggestion > div p:last-child {
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.suggestion > button {
+    margin-left: auto;
+    color: var(--button-enabled);
+}
+
+.about {
+    margin-top: 36px;
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--text-quartenary);
+}
+
+.about > ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.about > ul a {
+    line-height: 13px;
+}
+
+.about > ul a:hover {
+    line-height: 13px;
+    text-decoration: underline;
+}
+/* FIM Main right */
+/* ================================================ */
+
+/* ================================================ */
+/* Ajustes de UX */
+a:active,
+nav > ul li:active,
+button:active,
+.actions ion-icon:active,
+.comment .like-btn ion-icon:active {
+    opacity: 0.6;
+}
+
+.actions ion-icon,
+.comment .like-btn ion-icon,
+nav > ul li {
+    cursor: pointer;
+    transition: transform ease 0.3s;
+}
+
+.actions ion-icon:hover,
+nav > ul li:hover,
+.comment .like-btn ion-icon:hover {
+    transform: scale(1.05);
+}
+
+.actions ion-icon:active,
+nav > ul li:active,
+.comment .like-btn ion-icon:active {
+    transform: scale(0.95);
+}
+/* FIM Ajustes de UX */
+/* ================================================ */
+
+/* ================================================ */
+/* Switch theme */
+.switch-theme {
+    user-select: none;
+    height: 100%;
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+
+.switch-theme > label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 22px;
+    height: 22px;
+}
+
+.switch-theme > label ion-icon {
+    position: absolute;
+    transition: transform ease 0.4s, opacity ease 0.3s;
+}
+
+.switch-theme > label ion-icon:first-child {
+    opacity: 0;
+    transform: scale(0.65) rotateZ(calc(180deg * -1));
+}
+
+#switch-btn {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+#switch-btn:checked + label ion-icon:last-child {
+    opacity: 0;
+    transform: scale(0.65) rotateZ(180deg);
+}
+#switch-btn:checked + label ion-icon:first-child {
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+}
+
+/* FIM Switch theme */
+/* ================================================ */
