@@ -128,7 +128,7 @@ header > div {
     margin: 0 10px;
 }
 
-.instagram-img svg {
+.instagram-img .instagram-logo {
     margin-top: 10px;
     color: inherit;
 }
@@ -207,7 +207,7 @@ aside {
     position: relative;
 }
 
-.stories > object {
+.stories > .arrow {
     position: absolute;
     z-index: 2;
     right: 8px;
@@ -215,7 +215,7 @@ aside {
     transform: translateY(-50%);
 }
 
-.stories > object + .story {
+.stories > .arrow + .story {
     color: var(--text-secondary);
 }
 
