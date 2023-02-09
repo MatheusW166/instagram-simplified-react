@@ -1,9 +1,5 @@
 export default function Icon(props) {
-  const { name, href } = props;
+  const { name, className } = props;
 
-  return (
-    <a href={href}>
-      <ion-icon name={name}></ion-icon>
-    </a>
-  );
+  return <ion-icon name={name} className={className}></ion-icon>;
 }

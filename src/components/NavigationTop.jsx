@@ -1,25 +1,27 @@
 import ChangeThemeBtn from "./ChangeThemeBtn";
-import Icon from "./Icon";
+import ItemList from "./ItemList";
 
-export default function NavigationTop() {
+const defaultItems = [
+  { name: "paper-plane-outline", href: "/" },
+  { name: "compass-outline", href: "/" },
+  { name: "heart-outline", href: "/" },
+  { name: "person-outline", href: "/" },
+];
+
+export default function NavigationTop(props) {
+  const { children } = props;
+  const itemsList =
+    children ||
+    defaultItems.map((item, index) => (
+      <ItemList key={index} name={item.name} href={item.href} />
+    ));
   return (
     <nav className="top-nav">
       <ul>
-        <li>
+        <ItemList>
           <ChangeThemeBtn />
-        </li>
-        <li>
-          <Icon name="paper-plane-outline" href="/" />
-        </li>
-        <li>
-          <Icon name="compass-outline" href="/" />
-        </li>
-        <li>
-          <Icon name="heart-outline" href="/" />
-        </li>
-        <li>
-          <Icon name="person-outline" href="/" />
-        </li>
+        </ItemList>
+        {itemsList}
       </ul>
     </nav>
   );
