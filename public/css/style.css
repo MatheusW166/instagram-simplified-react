@@ -395,6 +395,7 @@ aside {
 .bottom a.mention {
     color: var(--tag-mention);
     font-weight: normal;
+    margin-right: 3px;
 }
 
 .comment {
