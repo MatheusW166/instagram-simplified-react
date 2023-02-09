@@ -1,3 +1,9 @@
+const USER = {
+  name: "bixo.piruleta",
+  displayName: "Bixo Piruleta",
+  image: "./images/piruleta.png",
+};
+
 const STORIES = [
   { text: "cjmodafoca", image: "./images/cj.jpeg" },
   {
@@ -95,9 +101,43 @@ const PUBS = [
   },
 ];
 
+const SUGGESTIONS = [
+  {
+    user: { name: "badvibesmemes", image: "./images/badvibesmemes_1.png" },
+    isFollowing: true,
+  },
+  {
+    user: { name: "chibirdart", image: "./images/chibirdart_1.png" },
+    isFollowing: false,
+  },
+  {
+    user: {
+      name: "razoesparaacreditar",
+      image: "./images/razoesparaacreditar_1.png",
+    },
+    isFollowing: false,
+  },
+  {
+    user: {
+      name: "adorable_animals",
+      image: "./images/adorableanimals_1.png",
+    },
+    isFollowing: true,
+  },
+  {
+    user: {
+      name: "smallcutecats",
+      image: "./images/smallcutecats_1.png",
+    },
+    isFollowing: true,
+  },
+];
+
 const db = {
   getStories: () => STORIES.map((s) => ({ ...s })),
+  getUser: () => ({ ...USER }),
   getPubs: () => PUBS,
+  getSuggestions: () => SUGGESTIONS,
 };
 
 export default db;
