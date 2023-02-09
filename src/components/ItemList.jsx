@@ -1,14 +1,6 @@
-import Icon from "./Icon";
+import IconLink from "./IconLink";
 
 export default function ItemList(props) {
   const { name, href, children } = props;
-  return (
-    <li>
-      {children || (
-        <a href={href}>
-          <Icon name={name} />
-        </a>
-      )}
-    </li>
-  );
+  return <li>{children || <IconLink name={name} href={href} />}</li>;
 }
