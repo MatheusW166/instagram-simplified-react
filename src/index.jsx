@@ -1,139 +1,16 @@
 import ReactDOM from "react-dom/client";
-import Arrow from "./components/Arrow";
 import Header from "./components/Header";
+import Stories from "./components/Stories";
+import db from "./db/db";
 
 function App() {
+  const stories = db.getStories();
   return (
     <>
       <Header />
       <div className="content">
         <main>
-          <section className="stories">
-            <Arrow />
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/piruleta.png"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">Seu history</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img alt="img" className="avatar" src="./images/cj.jpeg" />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">cjmodafoca</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/nathanwpylestrangeplanet_1.png"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">nathanwpylestrangeplanet</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img alt="img" className="avatar" src="./images/naruto.jpg" />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">uzumaki.naruto</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/wawawiwacomicsa_1.png"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">wawawiwacomicsa</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/filosofopiton.jpeg"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">filosofo.python</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img alt="img" className="avatar" src="./images/kratos.jpg" />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">kleiton.of.war</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/filomoderna_1.png"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">filomoderna</a>
-              </p>
-            </div>
-            <div className="story">
-              <a href="/">
-                <div className="story-ring">
-                  <img
-                    alt="img"
-                    className="avatar"
-                    src="./images/memeriagourmet_1.png"
-                  />
-                  <img alt="img" src="./images/stories_background.png" />
-                </div>
-              </a>
-              <p>
-                <a href="/">memeriago.</a>
-              </p>
-            </div>
-          </section>
+          <Stories stories={stories} />
           <section className="pubs">
             <article>
               <div className="my-user">
