@@ -8,11 +8,24 @@ export default function PubContent(props) {
 
   if (type === CONTENT_TYPE.video) {
     return (
-      <video onDoubleClick={onDoubleClick} autoPlay loop muted>
+      <video
+        data-test="post-image"
+        onDoubleClick={onDoubleClick}
+        autoPlay
+        loop
+        muted
+      >
         <source src={content} type="video/mp4" />
         Não suportado.
       </video>
     );
   }
-  return <img onDoubleClick={onDoubleClick} alt="img" src={content} />;
+  return (
+    <img
+      data-test="post-image"
+      onDoubleClick={onDoubleClick}
+      alt="img"
+      src={content}
+    />
+  );
 }

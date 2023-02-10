@@ -5,7 +5,7 @@ export default function SaveBtn() {
   const [isSaved, setIsSaved] = useState(false);
   return (
     <div className="save-btn">
-      <label onClick={() => setIsSaved(!isSaved)}>
+      <label data-test="save-post" onClick={() => setIsSaved(!isSaved)}>
         {!isSaved ? <Icon name="bookmark-outline" /> : <Icon name="bookmark" />}
       </label>
     </div>

@@ -18,6 +18,7 @@ export default function AsideUser(props) {
   return (
     <section className="my-user">
       <img
+        data-test="profile-image"
         onClick={changePhoto}
         alt="img"
         className="avatar"
@@ -25,8 +26,8 @@ export default function AsideUser(props) {
       />
       <div>
         <div className="edit-name">
-          <p>{user.name}</p>
-          <div onClick={changeName}>
+          <p data-test="name">{user.name}</p>
+          <div data-test="edit-name" onClick={changeName}>
             <Icon name="pencil" />
           </div>
         </div>

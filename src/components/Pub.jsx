@@ -48,7 +48,7 @@ export default function Pub(props) {
   }
 
   return (
-    <article>
+    <article data-test="post">
       <PubUser user={user} />
       <div className={`pub-content ${getAnimation()}`}>
         <PubContent

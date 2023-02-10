@@ -6,7 +6,12 @@ function PubLikesNumber(props) {
 
   return (
     <>
-      e <a href="/">outras {thousandSeparator(nOfLikes)} pessoas</a>
+      e{" "}
+      <a href="/">
+        outras{" "}
+        <span data-test="likes-number">{thousandSeparator(nOfLikes)}</span>{" "}
+        pessoas
+      </a>
     </>
   );
 }
