@@ -15,8 +15,8 @@ export default function Pub(props) {
 
   const [totalLikes, setTotalLikes] = useState(likes.totalLikes);
   const [isLiked, setIsLiked] = useState(false);
-  const [likeAnimation, setLikeAnimation] = useState(false);
-  const [fadeAnimation, setFadeAnimation] = useState(false);
+  const [isLikeAnimation, setIsLikeAnimation] = useState(false);
+  const [isFadeAnimation, setIsFadeAnimation] = useState(false);
 
   function handleLike() {
     setIsLiked(!isLiked);
@@ -30,19 +30,19 @@ export default function Pub(props) {
   }
 
   function handleDoubleClickLike() {
-    setLikeAnimation(true);
+    setIsLikeAnimation(true);
     handleLikeInImage();
     setTimeout(() => {
-      setLikeAnimation(false);
-      setFadeAnimation(true);
+      setIsLikeAnimation(false);
+      setIsFadeAnimation(true);
     }, 800);
   }
 
   function getAnimation() {
-    if (likeAnimation) {
+    if (isLikeAnimation) {
       return "like-animation";
     }
-    if (fadeAnimation) {
+    if (isFadeAnimation) {
       return "fade-animation";
     }
   }
