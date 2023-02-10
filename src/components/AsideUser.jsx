@@ -6,12 +6,12 @@ export default function AsideUser(props) {
 
   const changeName = () => {
     const newName = prompt("Digite seu novo nome.");
-    if (!newName.trim()) return;
+    if (!newName?.trim()) return;
     setUser({ ...user, name: newName });
   };
   const changePhoto = () => {
     const newPhoto = prompt("Coloque a url da sua nova foto.");
-    if (!newPhoto.trim()) return;
+    if (!newPhoto?.trim()) return;
     setUser({ ...user, image: newPhoto });
   };
 
