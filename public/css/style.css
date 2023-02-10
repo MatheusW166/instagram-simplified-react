@@ -297,9 +297,54 @@ aside {
     height: 32px;
 }
 
-.pubs article > img,
-.pubs article > video {
-    max-width: 100%;
+.pubs article > .pub-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pubs article > .pub-content ion-icon {
+    position: absolute;
+    color: var(--white);
+    font-size: 140px;
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all ease 0.3s;
+}
+
+.pubs article > .pub-content.like-animation ion-icon {
+    animation: like-animation ease 0.3s forwards;
+}
+.pubs article > .pub-content.fade-animation ion-icon {
+    animation: fade-animation ease 0.3s forwards;
+}
+
+@keyframes like-animation {
+    from {
+        visibility: visible;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade-animation {
+    from {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.pubs article > .pub-content,
+.pubs article > .pub-content img,
+.pubs article > .pub-content video {
+    width: 100%;
     max-height: 612px;
     cursor: pointer;
 }

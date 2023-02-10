@@ -1,5 +1,5 @@
 export default function Icon(props) {
-  const { name, className } = props;
+  const { name } = props;
 
-  return <ion-icon name={name} className={className}></ion-icon>;
+  return <ion-icon name={name}></ion-icon>;
 }
