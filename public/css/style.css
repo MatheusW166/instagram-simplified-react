@@ -483,6 +483,22 @@ aside {
     color: var(--text-primary);
 }
 
+.my-user img,
+.edit-name ion-icon {
+    cursor: pointer;
+    user-select: none;
+}
+
+.edit-name {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.edit-name ion-icon {
+    font-size: 15px;
+}
+
 .my-user > div p:last-child {
     font-weight: 300;
     color: var(--text-secondary);
