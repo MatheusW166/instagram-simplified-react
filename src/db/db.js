@@ -67,7 +67,7 @@ const PUBS = [
     image: "./images/gato-telefone_1.png",
     likes: {
       firstUserLike: { name: "uzumaki.naruto", image: "./images/naruto.jpg" },
-      totalLikes: 47.001,
+      totalLikes: 47001,
     },
     caption: {
       text: "Os gatos vão dominar o mundo?",
