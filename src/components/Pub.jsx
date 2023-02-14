@@ -9,6 +9,8 @@ import Icon from "./Icon";
 import PubContent, { CONTENT_TYPE } from "./PubContent";
 import { useState } from "react";
 
+const Desappear_Delay = 800;
+
 export default function Pub(props) {
   const { user, likes, image, video, caption, pubComments, createdAt } =
     props.pubData;
@@ -20,13 +22,18 @@ export default function Pub(props) {
 
   function handleLike() {
     setIsLiked(!isLiked);
-    if (isLiked) setTotalLikes(totalLikes - 1);
-    else setTotalLikes(totalLikes + 1);
+    if (isLiked) {
+      setTotalLikes(totalLikes - 1);
+    } else {
+      setTotalLikes(totalLikes + 1);
+    }
   }
 
   function handleLikeInImage() {
     setIsLiked(true);
-    if (!isLiked) setTotalLikes(totalLikes + 1);
+    if (!isLiked) {
+      setTotalLikes(totalLikes + 1);
+    }
   }
 
   function handleDoubleClickLike() {
@@ -35,7 +42,7 @@ export default function Pub(props) {
     setTimeout(() => {
       setIsLikeAnimation(false);
       setIsFadeAnimation(true);
-    }, 800);
+    }, Desappear_Delay);
   }
 
   function getAnimation() {

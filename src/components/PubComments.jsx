@@ -3,7 +3,9 @@ import PubComment from "./PubComment";
 
 export default function PubComments(props) {
   const { totalComments, comments } = props;
-  if (!totalComments) return "";
+  if (!totalComments) {
+    return "";
+  }
   return (
     <div className="comments">
       <p className="see-more">

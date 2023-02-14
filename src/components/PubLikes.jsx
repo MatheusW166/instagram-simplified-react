@@ -2,7 +2,9 @@ import thousandSeparator from "../helpers/thousandSeparator";
 
 function PubLikesNumber(props) {
   const { nOfLikes } = props;
-  if (!nOfLikes) return "";
+  if (!nOfLikes) {
+    return "";
+  }
 
   return (
     <>
@@ -28,7 +30,9 @@ function PubLikedBy(props) {
 
 export default function PubLikes(props) {
   const { firstUserLike, totalLikes } = props;
-  if (!firstUserLike) return "";
+  if (!firstUserLike) {
+    return "";
+  }
 
   return (
     <div className="likes">

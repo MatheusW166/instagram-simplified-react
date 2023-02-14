@@ -1,4 +1,4 @@
-export default function AsideAbout(props) {
+export default function AsideAbout() {
   return (
     <section className="about">
       <ul>

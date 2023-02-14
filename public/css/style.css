@@ -659,7 +659,6 @@ nav > ul li:active,
 /* ================================================ */
 /* Switch theme */
 .switch-theme {
-    height: 100%;
     width: 22px;
     height: 22px;
     position: relative;

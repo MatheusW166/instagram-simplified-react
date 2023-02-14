@@ -1,6 +1,6 @@
 import AsideSuggestion from "./AsideSuggestion";
 
-function AsideSuggestionsTitle(props) {
+function AsideSuggestionsTitle() {
   return (
     <div>
       <h6>Sugestões para você</h6>

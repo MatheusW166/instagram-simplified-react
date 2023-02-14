@@ -1,6 +1,6 @@
 import IconLink from "./IconLink";
 
-export default function PubPostComment(props) {
+export default function PubPostComment() {
   return (
     <div className="post-a-comment">
       <IconLink name="happy-outline" href="/" />
