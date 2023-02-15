@@ -1,12 +1,12 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MatheusW166/instagram-simplified/blob/main/LICENCE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MatheusW166/instagram-simplified-react/tree/main)
 
 # Layout Simplificado do Instagram (React)
 
 | <a href="#refs-mobile">Imagens</a> | <a href="#about">Sobre</a> | <a href="#tech">Tecnologias</a> |
 
-<!-- Página disponível no link a seguir:
+Página disponível no link a seguir:
 
-- [Instagram Clone](https://matheusw166.github.io/instagram-simplified/) -->
+- [Instagram Clone](https://matheusw166.github.io/instagram-simplified-react/)
 
 ## ℹ Sobre
 
