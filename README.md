@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MatheusW166/instagram-simplified-react/tree/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MatheusW166/instagram-simplified-react/blob/main/LICENCE)
 
 # Layout Simplificado do Instagram (React)
 
