@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.06e85a54.js",
-    "index.html": "/index.html",
-    "main.06e85a54.js.map": "/static/js/main.06e85a54.js.map"
+    "main.js": "/instagram-simplified-react/static/js/main.06e85a54.js",
+    "index.html": "/instagram-simplified-react/index.html",
+    "main.06e85a54.js.map": "/instagram-simplified-react/static/js/main.06e85a54.js.map"
   },
   "entrypoints": [
     "static/js/main.06e85a54.js"
