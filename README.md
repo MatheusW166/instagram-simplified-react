@@ -11,7 +11,7 @@ Página disponível no link a seguir:
 ## ℹ Sobre
 
 <span id="about">
-Projeto criado como parte de avaliação no curso full stack da <a href="https://www.driven.com.br/">Driven</a>. O projeto consiste em uma página responsiva baseada no Instagram Web, com opção de troca de temas. A troca de temas foi implementada apenas com CSS e HTML, usando JavaScript somente para salvar a escolha do usuário localmente.
+O projeto consiste em uma página responsiva baseada no Instagram Web, com opção de troca de temas. A troca de temas foi implementada apenas com CSS e HTML, usando JavaScript somente para salvar a escolha do usuário localmente.
 </span>
 
 ## 🎨 Imagens
